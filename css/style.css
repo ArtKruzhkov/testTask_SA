@@ -292,7 +292,7 @@ a {
 }
 .like {
   font-size: 14px;
-  background: url(/img/like.png);
+  background: url(../img/like.png);
   background-repeat: no-repeat;
   padding-left: 20px;
   color: #6983bd;

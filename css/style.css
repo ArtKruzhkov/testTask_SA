@@ -2,7 +2,9 @@
 * {
   max-width: unset;
 }
-
+* {
+  box-sizing: border-box;
+}
 .text_grad {
   text-shadow: rgba(0, 50, 0, 0.5) 0px 2px 4px;
   line-height: clamp(70px, 2.86vw, 54.912px);
@@ -152,9 +154,6 @@
     transform: scale(1);
   }
 }
-* {
-  box-sizing: border-box;
-}
 body {
   background: #fff;
   display: block;
@@ -292,7 +291,7 @@ a {
 }
 .like {
   font-size: 14px;
-  background: url(like.png);
+  background: url(/img/like.png);
   background-repeat: no-repeat;
   padding-left: 20px;
   color: #6983bd;
@@ -322,19 +321,25 @@ a {
   padding-left: 64px;
 }
 .pic1 {
-  background: url(1.jpg) no-repeat scroll 0px 0px transparent;
+  background: url(/img/comments/1.jpg) no-repeat scroll 0px 0px transparent;
 }
 .pic2 {
-  background: url(2.jpg) no-repeat scroll 0px 0px transparent;
+  background: url(/img/comments/2.jpg) no-repeat scroll 0px 0px transparent;
 }
 .pic3 {
-  background: url(3.jpg) no-repeat scroll 0px 0px transparent;
+  background: url(/img/comments/3.jpg) no-repeat scroll 0px 0px transparent;
 }
 .pic4 {
-  background: url(4.jpg) no-repeat scroll 0px 0px transparent;
+  background: url(/img/comments/4.jpg) no-repeat scroll 0px 0px transparent;
 }
 .pic5 {
-  background: url(5.jpg) no-repeat scroll 0px 0px transparent;
+  background: url(/img/comments/5.jpg) no-repeat scroll 0px 0px transparent;
+}
+.pic6 {
+  background: url(/img/comments/6.png) no-repeat scroll 0px 0px transparent;
+}
+.pic7 {
+  background: url(/img/comments/7.png) no-repeat scroll 0px 0px transparent;
 }
 .content {
   padding: 10px 10px 0px 10px;

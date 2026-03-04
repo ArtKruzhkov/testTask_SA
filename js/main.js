@@ -76,30 +76,30 @@ function getWeekDay(){
 // timer
 /***********************************************/
 
-function countdown() {
-  let mins = parseInt(document.getElementById('mins').innerHTML);
-  let secs = parseInt(document.getElementById('hsecs').innerHTML);
+// function countdown() {
+//   let mins = parseInt(document.getElementById('mins').innerHTML);
+//   let secs = parseInt(document.getElementById('hsecs').innerHTML);
 
-  let nmins;
-  let nsecs;
+//   let nmins;
+//   let nsecs;
 
-  if (mins != 0 && secs == 0) {
-    nmins = mins - 1;
-    nsecs = 59;
-  } else if (mins != 0 || secs != 0) {
-    nmins = mins;
-    nsecs = secs - 1;
-  } else if (mins == 0 && secs == 0) {
-    nmins = mins;
-    nsecs = secs;
-  }
+//   if (mins != 0 && secs == 0) {
+//     nmins = mins - 1;
+//     nsecs = 59;
+//   } else if (mins != 0 || secs != 0) {
+//     nmins = mins;
+//     nsecs = secs - 1;
+//   } else if (mins == 0 && secs == 0) {
+//     nmins = mins;
+//     nsecs = secs;
+//   }
 
-  document.getElementById('mins').innerHTML = nmins;
-  document.getElementById('hsecs').innerHTML = nsecs;
+//   document.getElementById('mins').innerHTML = nmins;
+//   document.getElementById('hsecs').innerHTML = nsecs;
 
-  if (nsecs < 10) nsecs = '0' + nsecs;
-  document.getElementById('hsecs').innerHTML = nsecs;
-}
+//   if (nsecs < 10) nsecs = '0' + nsecs;
+//   document.getElementById('hsecs').innerHTML = nsecs;
+// }
 
 /***********************************************/
 // events

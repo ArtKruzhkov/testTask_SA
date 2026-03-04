@@ -1,5 +1,158 @@
 /* general styles */
 * {
+  max-width: unset;
+}
+
+.text_grad {
+  text-shadow: rgba(0, 50, 0, 0.5) 0px 2px 4px;
+  line-height: clamp(70px, 2.86vw, 54.912px);
+  letter-spacing: clamp(0.702px, 0.052vw, 0.9984px);
+  text-transform: uppercase;
+  background-image: linear-gradient(91deg, rgb(50, 205, 50) 15.02%, rgb(0, 100, 0) 108.43%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-color: initial;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: grid;
+  margin-bottom: 10px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+:root {
+  --ll-color-primary: #2659dc;
+  --ll-color-secondary: #00ac81;
+  --ll-color-background: #ffffff;
+  --ll-color-text-primary: #181822;
+  --ll-color-text-secondary: #8b8b9e;
+  --ll-font-heading: Arial;
+  --ll-font-body: Arial;
+}
+
+#g41uat {
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+#as5000 {
+  color: darkgreen;
+  font-weight: 900;
+  font-size: 60px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#modalButtonFirst {
+  display: inline-block;
+  box-shadow:
+    rgba(140, 212, 245, 0.8) 0px 0px 2px,
+    rgba(0, 0, 0, 0.047) 0px 0px 0px 1px inset;
+  background-color: #ffa500;
+  font-weight: bold;
+  animation-duration: 1.15s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: toato;
+  font-size: 28px;
+}
+
+#modalButtonSecond {
+  animation-duration: 1.15s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: toato;
+}
+
+#modalButtonThird {
+  animation-duration: 1.15s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: toato;
+}
+
+#i5mzwz {
+  animation-duration: 1.15s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: toato;
+}
+
+#ijjtmh {
+  margin-top: -15px;
+}
+
+#fo5ijg {
+  /* font-weight: bold; */
+  font-size: 30px;
+  color: black;
+}
+
+#ir9jml {
+  font-size: 13px;
+  color: darkslategray;
+}
+
+#ed47rk {
+  font-size: 15px;
+  color: darkslategray;
+}
+
+#i25ci {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+
+#typeOS {
+  font-size: 18px;
+  color: blue;
+  text-decoration-line: underline;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+  cursor: pointer;
+}
+
+#if43m {
+  color: limegreen;
+}
+
+@keyframes toato {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+* {
   box-sizing: border-box;
 }
 body {
@@ -775,16 +928,16 @@ a {
     transform: rotate(3109deg);
   }
   90% {
-    -webkit-transform: rotate(6314deg);
-    transform: rotate(6314deg);
+    -webkit-transform: rotate(6384deg);
+    transform: rotate(6384deg);
   }
   95% {
-    -webkit-transform: rotate(6312deg);
-    transform: rotate(6312deg);
+    -webkit-transform: rotate(6385deg);
+    transform: rotate(6385deg);
   }
   100% {
-    -webkit-transform: rotate(6313deg);
-    transform: rotate(6313deg);
+    -webkit-transform: rotate(6386deg);
+    transform: rotate(6386deg);
   }
 }
 @-moz-keyframes spinThree {
@@ -793,16 +946,16 @@ a {
     transform: rotate(3109deg);
   }
   90% {
-    -moz-transform: rotate(6314deg);
-    transform: rotate(6314deg);
+    -moz-transform: rotate(6384deg);
+    transform: rotate(6384deg);
   }
   95% {
-    -moz-transform: rotate(6312deg);
-    transform: rotate(6312deg);
+    -moz-transform: rotate(6385deg);
+    transform: rotate(6385deg);
   }
   100% {
-    -moz-transform: rotate(6313deg);
-    transform: rotate(6313deg);
+    -moz-transform: rotate(6386deg);
+    transform: rotate(6386deg);
   }
 }
 @-o-keyframes spinThree {
@@ -811,16 +964,16 @@ a {
     transform: rotate(3109deg);
   }
   90% {
-    -o-transform: rotate(6314deg);
-    transform: rotate(6314deg);
+    -o-transform: rotate(6384deg);
+    transform: rotate(6384deg);
   }
   95% {
-    -o-transform: rotate(6312deg);
-    transform: rotate(6312deg);
+    -o-transform: rotate(6385deg);
+    transform: rotate(6385deg);
   }
   100% {
-    -o-transform: rotate(6313deg);
-    transform: rotate(6313deg);
+    -o-transform: rotate(6386deg);
+    transform: rotate(6386deg);
   }
 }
 @keyframes spinThree {
@@ -831,22 +984,22 @@ a {
     transform: rotate(3109deg);
   }
   90% {
-    -webkit-transform: rotate(6314deg);
-    -moz-transform: rotate(6314deg);
-    -o-transform: rotate(6314deg);
-    transform: rotate(6314deg);
+    -webkit-transform: rotate(6384deg);
+    -moz-transform: rotate(6384deg);
+    -o-transform: rotate(6384deg);
+    transform: rotate(6384deg);
   }
   95% {
-    -webkit-transform: rotate(6312deg);
-    -moz-transform: rotate(6312deg);
-    -o-transform: rotate(6312deg);
-    transform: rotate(6312deg);
+    -webkit-transform: rotate(6385deg);
+    -moz-transform: rotate(6385deg);
+    -o-transform: rotate(6385deg);
+    transform: rotate(6385deg);
   }
   100% {
-    -webkit-transform: rotate(6313deg);
-    -moz-transform: rotate(6313deg);
-    -o-transform: rotate(6313deg);
-    transform: rotate(6313deg);
+    -webkit-transform: rotate(6386deg);
+    -moz-transform: rotate(6386deg);
+    -o-transform: rotate(6386deg);
+    transform: rotate(6386deg);
   }
 }
 @-webkit-keyframes showSweetAlert {

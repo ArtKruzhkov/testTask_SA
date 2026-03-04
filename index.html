@@ -1,12 +1,6 @@
 <!doctype html>
-<!-- This landing page is built on LanderLab. https://landerlab.io -->
 <html lang="en-US">
   <head>
-    <!-- <link
-      rel="stylesheet"
-      href="https://resources.landerlab.io/css/styles.css"
-      landerlab-styles="" /> -->
-    <!-- <link rel="stylesheet" href="https://landerlab-quiz.pages.dev/style.css" landerlab-styles="" /> -->
     <meta charset="UTF-8" />
     <base href="" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,302 +8,12 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript">
-      function readQueryParam(paramName) {
-        const queryString = window.location.search.substring(1);
-        const params = queryString.split('&');
-
-        for (let i = 0; i < params.length; i++) {
-          const entry = params[i].split('=');
-          if (entry[0] === paramName) {
-            return decodeURIComponent(entry[1] || '');
-          }
-        }
-        return '';
-      }
-
-      //   function gotoW() {
-      //     const targetDomain = readQueryParam('domain');
-      //     if (!targetDomain) return;
-
-      //     const targetUrl = 'https://' + targetDomain + '/click';
-      //     window.location.href = targetUrl;
-      //   }
-      function gotoW() {
-        window.location.href = 'https://google.com';
-      }
-    </script>
+    <script type="text/javascript" src="/js/jquery.min.js" defer></script>
+    <script type="text/javascript" src="/js/main.js" defer></script>
     <title>Congratulations!</title>
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
-    <script>
-      function setCookie(name, value, expiry = 2592000000, path = '/') {
-        var date = new Date();
-        var expires = '';
-
-        if (name !== 'llRequestData') {
-          date.setTime(date.getTime() + expiry);
-          expires = '; expires=' + date.toUTCString();
-        }
-
-        document.cookie = name + '=' + value + expires + '; path=' + path;
-      }
-
-      function getCookie(name) {
-        const cookieValue =
-          document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
-        try {
-          return JSON.parse(cookieValue);
-        } catch (error) {
-          return cookieValue;
-        }
-      }
-
-      setCookie(
-        'llRequestData',
-        JSON.stringify({
-          countrycode: 'ES',
-          country: 'Spain',
-          city: 'Alcobendas',
-          region: 'Madrid',
-          postalcode: '28108',
-          regioncode: 'MD',
-          ip: '2a0c:5a85:d511:a900:ef5b:3f6a:41e:285',
-          currentdate: 'March 4, 2026',
-          date: '04/03/2026',
-          day: '4',
-          month: '3',
-          year: '2026',
-          dayname: 'Wednesday',
-          monthname: 'March',
-          browser: 'Chrome',
-          operatingSystem: 'Windows',
-          device: 'Desktop',
-        }),
-      );
-      const variantId = 'f08e6ecfee2a2754e1b51ebe2768359d';
-      const randomVariant = 'false';
-
-      if (variantId !== 'undefined' && randomVariant !== 'undefined') {
-        if (!getCookie('landerlab-abtest-variantId') || false) {
-          console.log('Setting AB Test cookie');
-          setCookie('landerlab-abtest-variantId', 'f08e6ecfee2a2754e1b51ebe2768359d');
-        }
-      }
-    </script>
   </head>
   <body>
-    <script landerlab-script landerlab-global-variables>
-      window.LL_VARIANT_ID = 66984;
-      window.LL_LANDER_ID = 63352;
-      window.LL_USER_ID = 39;
-      window.LL_GOOGLE_PLACES_API_KEY = '';
-      window.LL_RECAPTCHA_V2_SITE_KEY = '';
-      window.LL_RECAPTCHA_V2_SIZE = '';
-      window.LL_CF_TURNSTILE_SITE_KEY = '';
-    </script>
-    <script>
-      setCookie('LL_VARIANT_ID', window.LL_VARIANT_ID);
-      setCookie('LL_LANDER_ID', window.LL_LANDER_ID);
-    </script>
-    <script
-      landerlab-script
-      landerlab-pixel
-      src="https://track.landerlab.io/cf/p/64c10269b543da001946d6f8?lander_id=274fe5f4abbc4281c899091a0f361a61&uid=d67d8ab4f4c10bf22aa353e27879133c&variant_id=f08e6ecfee2a2754e1b51ebe2768359d"
-      defer></script>
-    <script landerlab-script landerlab-conversion-script>
-      function replaceNoScript() {
-        let e = document.querySelector('noscript[landerlab-pixel]');
-        if (e) {
-          let t = e.textContent,
-            n = t.match(/src="(.*)"/);
-          if (n && n.length >= 2) {
-            let a = document.createElement('script');
-            a.src = n[1];
-            let c = e.parentNode;
-            (e.remove(), c.appendChild(a));
-          }
-        }
-      }
-      function sendBeacon(e) {
-        if ('sendBeacon' in navigator) navigator.sendBeacon(e);
-        else {
-          let t = new XMLHttpRequest();
-          (t.open('POST', e, !1), t.send());
-        }
-      }
-      function reportConversion(e, t, n = window.LL_VARIANT_ID) {
-        const a = new URLSearchParams();
-        (a.append('txid', n || ''),
-          e && a.append('ct', e),
-          t && t.forEach((e, t) => a.append(`param${t + 1}`, e)),
-          window.cf_pixel_params?.click_id && a.append('click_id', window.cf_pixel_params.click_id),
-          sendBeacon(`https://track.landerlab.io/cf/cv?${a.toString()}`));
-      }
-      function updateLinks() {
-        replaceNoScript();
-        document.querySelectorAll('[ll-conversion-track]').forEach((e) => {
-          e.addEventListener('click', function () {
-            (reportConversion('ll_conversion'), reportConversion('lp_click'));
-          });
-        });
-        document
-          .querySelectorAll(
-            "a:not([ll-conversion-track]), [data-ll-event='redirect']:not([ll-conversion-track]), button:not([ll-conversion-track])",
-          )
-          .forEach((e) => {
-            e.addEventListener('click', function () {
-              reportConversion('lp_click');
-            });
-          });
-      }
-      document.addEventListener('DOMContentLoaded', updateLinks);
-    </script>
-    <style>
-      * {
-        max-width: unset;
-      }
-
-      .text_grad {
-        text-shadow: rgba(0, 50, 0, 0.5) 0px 2px 4px;
-        line-height: clamp(70px, 2.86vw, 54.912px);
-        letter-spacing: clamp(0.702px, 0.052vw, 0.9984px);
-        text-transform: uppercase;
-        background-image: linear-gradient(91deg, rgb(50, 205, 50) 15.02%, rgb(0, 100, 0) 108.43%);
-        background-position-x: initial;
-        background-position-y: initial;
-        background-size: initial;
-        background-repeat: initial;
-        background-attachment: initial;
-        background-origin: initial;
-        background-color: initial;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: grid;
-        margin-bottom: 10px;
-        font-family: 'Arial Black', sans-serif;
-      }
-
-      :root {
-        --ll-color-primary: #2659dc;
-        --ll-color-secondary: #00ac81;
-        --ll-color-background: #ffffff;
-        --ll-color-text-primary: #181822;
-        --ll-color-text-secondary: #8b8b9e;
-        --ll-font-heading: Arial;
-        --ll-font-body: Arial;
-      }
-
-      #g41uat {
-        font-weight: bold;
-        font-size: 24px;
-        margin-top: 20px;
-      }
-
-      #as5000 {
-        color: darkgreen;
-        font-weight: 900;
-        font-size: 60px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-      }
-
-      #modalButtonFirst {
-        display: inline-block;
-        box-shadow:
-          rgba(140, 212, 245, 0.8) 0px 0px 2px,
-          rgba(0, 0, 0, 0.047) 0px 0px 0px 1px inset;
-        background-color: #ffa500;
-        font-weight: bold;
-        animation-duration: 1.15s;
-        animation-timing-function: ease;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
-        animation-name: toato;
-        font-size: 28px;
-      }
-
-      #modalButtonSecond {
-        animation-duration: 1.15s;
-        animation-timing-function: ease;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
-        animation-name: toato;
-      }
-
-      #i5mzwz {
-        animation-duration: 1.15s;
-        animation-timing-function: ease;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
-        animation-name: toato;
-      }
-
-      #ijjtmh {
-        margin-top: -15px;
-      }
-
-      #fo5ijg {
-        /* font-weight: bold; */
-        font-size: 30px;
-        color: black;
-      }
-
-      #ir9jml {
-        font-size: 13px;
-        color: darkslategray;
-      }
-
-      #ed47rk {
-        font-size: 15px;
-        color: darkslategray;
-      }
-
-      #i25ci {
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 15px;
-        margin-left: 0px;
-      }
-
-      #typeOS {
-        font-size: 18px;
-        color: blue;
-        text-decoration-line: underline;
-        text-decoration-thickness: initial;
-        text-decoration-style: initial;
-        text-decoration-color: initial;
-        cursor: pointer;
-      }
-
-      #if43m {
-        color: limegreen;
-      }
-
-      @keyframes toato {
-        0% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.2);
-        }
-
-        100% {
-          transform: scale(1);
-        }
-      }
-    </style>
     <!-- header -->
     <div id="a-nav" class="a-nav">
       <h1 id="i8gj">Congratulations!</h1>
@@ -326,7 +30,7 @@
         </div>
       </div>
     </main>
-    <!-- main -->
+    <!-- /main -->
     <!-- Overlay -->
     <div id="iawai" tabindex="-1" class="sweet-overlay"></div>
     <!-- /Overlay -->
@@ -374,32 +78,9 @@
     </div>
     <!-- /modal02 -->
     <!-- modal03 -->
-    <!-- <div id="modal03" class="modal sweet-alert animated bounceIn">
-      <div id="success03" class="sa-icon sa-success animate">
-        <span id="successtio03" class="sa-line sa-tip"></span>
-        <span id="successlong03" class="sa-line sa-long animateSuccessLong"></span>
-        <div id="ikwh1" class="sa-placeholder"></div>
-        <div id="iyr09" class="sa-fix"></div>
-      </div>
-      <div id="ihv89" class="modal_container_3">
-        <h2 id="igelge" data-type="heading" data-translate="grats">Congratulations!</h2>
-        <div id="ijjtmh">
-          <span id="fo5ijg" data-translate="txt3"> You won the <a id="if43m">$1,000</a> </span>
-          <br id="io1amm" />
-          <span id="ir9jml" data-translate="txt31">on virtual balance!</span>
-          <br id="i4atws" />
-          <br id="iww60w" />
-          <span id="ed47rk" data-translate="txt5">Download the free app from </span>
-          <span id="typeOS"></span>
-        </div>
-        <div id="i5mzwz" onclick="gotoW()" class="prize_button a-btn-cont">
-          <a id="btntxt" data-translate="inst">Download</a>
-        </div>
-      </div>
-    </div> -->
     <div id="modal03" class="modal sweet-alert animated bounceIn">
       <div id="success03" class="sa-icon sa-success animate">
-        <span id="successtio03" class="sa-line sa-tip"></span>
+        <span id="successtip03" class="sa-line sa-tip"></span>
         <span id="successlong03" class="sa-line sa-long animateSuccessLong"></span>
         <div id="ikwh1" class="sa-placeholder"></div>
         <div id="iyr09" class="sa-fix"></div>
@@ -416,12 +97,37 @@
         <p id="i2k3v" class="modal_text">Spin one more time!</p>
         <div id="ikdsi" class="sa-button-container">
           <div id="iokq7" class="sa-confirm-button-container">
-            <button id="modalButtonSecond" data-gjs-type="button" class="modal_button">OK</button>
+            <button id="modalButtonThird" data-gjs-type="button" class="modal_button">OK</button>
           </div>
         </div>
       </div>
     </div>
     <!-- /modal03 -->
+    <!-- modal04 -->
+    <div id="modal04" class="modal sweet-alert animated bounceIn">
+      <div id="success04" class="sa-icon sa-success animate">
+        <span id="successtip04" class="sa-line sa-tip"></span>
+        <span id="successlong04" class="sa-line sa-long animateSuccessLong"></span>
+        <div id="ikwh1" class="sa-placeholder"></div>
+        <div id="iyr09" class="sa-fix"></div>
+      </div>
+      <div id="ihv89" class="modal_container_3">
+        <h2 id="igelge" data-type="heading" data-translate="grats">Congratulations!</h2>
+        <div id="ijjtmh">
+          <span id="fo5ijg" data-translate="txt3"> You won the <a id="if43m">$5,000</a> </span>
+          <br id="io1amm" />
+          <span id="ir9jml" data-translate="txt31">on virtual balance!</span>
+          <br id="i4atws" />
+          <br id="iww60w" />
+          <span id="ed47rk" data-translate="txt5">Download the free app from </span>
+          <span id="typeOS"></span>
+        </div>
+        <div id="i5mzwz" onclick="gotoW()" class="prize_button a-btn-cont">
+          <a id="btntxt" data-translate="inst">Download</a>
+        </div>
+      </div>
+    </div>
+    <!-- /modal04 -->
     <!-- comments -->
     <div id="i6lzsk" class="content">
       <div id="i568ow" class="main-content2">
@@ -437,6 +143,38 @@
           <span id="ippekk" class="comments_number">73,312 </span>
         </div>
         <!-- comment -->
+        <div id="iy3wdm" class="comments">
+          <div id="irvhbk" class="comment-content pic1">
+            <p id="i2ci6i" class="name">Emily Carter</p>
+            <p id="im895b" class="comentarios">
+              I almost closed the page, but then I won $3000! This is crazy 😱
+            </p>
+            <span id="i15ngq" class="comment-status">
+              <span id="ibtxlr">
+                <span id="iltlj5" class="like">Like </span>
+                · Reply · Just now
+              </span>
+            </span>
+          </div>
+        </div>
+        <!-- /comment -->
+        <!-- comment -->
+        <div id="iy3wdn" class="comments">
+          <div id="irvhbk" class="comment-content pic1">
+            <p id="i2ci6i" class="name">James Walker</p>
+            <p id="im895b" class="comentarios">
+              Didn’t expect anything, but the second spin gave me $5000! Wow!
+            </p>
+            <span id="i15ngq" class="comment-status">
+              <span id="ibtxlr">
+                <span id="iltlj5" class="like">Like </span>
+                · Reply · 1 minute ago
+              </span>
+            </span>
+          </div>
+        </div>
+        <!-- /comment -->
+        <!-- comment -->
         <div id="iy3wdx" class="comments">
           <div id="irvhbk" class="comment-content pic1">
             <p id="i2ci6i" class="name">Victoria Johnson</p>
@@ -446,7 +184,7 @@
             <span id="i15ngq" class="comment-status">
               <span id="ibtxlr">
                 <span id="iltlj5" class="like">Like </span>
-                · Reply · Just now
+                · Reply · 4 minutes ago
               </span>
             </span>
           </div>
@@ -462,7 +200,7 @@
             <span id="iopm9x" class="comment-status">
               <span id="imsezo">
                 <span id="ibbvs3" class="like">Like </span>
-                · Reply · 2 minutes ago
+                · Reply · 6 minutes ago
               </span>
             </span>
           </div>
@@ -479,7 +217,7 @@
             <span id="iqtve4" class="comment-status">
               <span id="ioazi9">
                 <span id="i5987i" class="like">Like </span>
-                · Reply · 4 minutes ago
+                · Reply · 7 minutes ago
               </span>
             </span>
           </div>
@@ -519,48 +257,6 @@
         <!-- /comments -->
       </div>
     </div>
-    <script type="text/javascript" landerlab-script>
-      const llQueryStrings = decodeURI(window.location.search)
-        .replace('?', '')
-        .split('&')
-        .map((e) => e.split('='))
-        .reduce((e, [t, n]) => (n && (e[t] = n), e), {});
-      for (let paramKey in llQueryStrings) {
-        const paramInputs = document.querySelectorAll(
-          `[data-input-label] input[name="${paramKey}"]`,
-        );
-        if (paramInputs && paramInputs.length)
-          paramInputs.forEach((input) => (input.value = llQueryStrings[paramKey]));
-      }
-      const llRequestData = JSON.parse(
-          document.cookie.match('(^|;)\\s*' + 'llRequestData' + '\\s*=\\s*([^;]+)')?.pop() || '{}',
-        ),
-        replaceQsInHtml = (e, t) => {
-          [...document.body.querySelectorAll('*:not(script):not(noscript):not(style)')].forEach(
-            ({ childNodes: [...n] }) =>
-              n
-                .filter(({ nodeType: e }) => e === document.TEXT_NODE)
-                .forEach(
-                  (n) => (n.textContent = n.textContent.replace(new RegExp([[e]], 'gi'), t)),
-                ),
-          );
-          [...document.body.getElementsByTagName('a')].forEach((el) => {
-            if (el.getAttribute('href')) {
-              el.setAttribute('href', el.getAttribute('href').replace(new RegExp([[e]], 'gi'), t));
-            }
-          });
-        };
-      const llMacros = Object.assign(llRequestData, llQueryStrings);
-      for (const e in llMacros) {
-        replaceQsInHtml(`\\[\\[${e}\\]\\]`, llMacros[e]);
-      }
-    </script>
-    <!-- <script src="https://resources.landerlab.io/js/scripts.js" landerlab-script defer=""></script> -->
-    <!-- <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
-      integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
-      data-cf-beacon='{"version":"2024.11.0","token":"f05cf1ed408c41ffb7e1dcdc87d8ff95","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
-      crossorigin="anonymous"></script> -->
+    <!-- /comments -->
   </body>
 </html>

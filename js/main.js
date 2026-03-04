@@ -1,4 +1,11 @@
 /***********************************************/
+// redirect
+/***********************************************/
+function gotoW() {
+  window.location.href = 'https://google.com';
+}
+
+/***********************************************/
 // to show/hide modals
 /***********************************************/
 
@@ -102,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   const modalButtonFirst = document.getElementById('modalButtonFirst');
   const modalButtonSecond = document.getElementById('modalButtonSecond');
+  const modalButtonThird = document.getElementById('modalButtonThird');
   //   setInterval('countdown()', 1000);
 
   function clickListener(event) {
@@ -113,6 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (target === modalButtonSecond) {
       hidemodal02();
+    }
+
+    if (target === modalButtonThird) {
+      hidemodal03();
     }
   }
 
